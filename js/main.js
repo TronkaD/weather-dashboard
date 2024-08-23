@@ -15,6 +15,7 @@ document.getElementById('search-button').addEventListener('click', () =>{
 })
 
 async function  getWeatherData(city) {
+    
     try {
         const weatherData = await getWeather(city);
         const forecastData = await getForecast(city);
@@ -100,5 +101,4 @@ function displayAirQuality(data){
                 </p>`;
     newDiv.innerHTML = text; 
     para.appendChild(newDiv);
-    console.log(data);
 }
